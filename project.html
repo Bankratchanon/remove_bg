@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upload and Remove Background</title>
+<link rel="stylesheet" href="styles.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Itim&family=Pridi:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-brand">
+      <h1>Remove Background</h1>
+    </div>
+    <div class="navbar-links">
+      <a href="javascript:void(0)" onclick="showHome()">Home</a>
+      <a href="javascript:void(0)" onclick="showAbout()">About</a>
+      <a href="javascript:void(0)" onclick="showContact()">Contact</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="homeContent">
+      <h1>Upload and Remove Background</h1>
+      <input type="text" id="imageUrl" class="input-url" placeholder="Enter image URL">
+      
+      <div class="images-wrapper">
+        <div class="image-container" id="originalImageContainer"></div>
+        <div class="image-container" id="modifiedImageContainer"></div>
+      </div>
+  
+      <div class="button-container">
+        <label for="upload" class="custom-file-upload">Choose Image</label>
+        <input type="file" id="upload" accept="image/png, image/jpeg" onchange="previewImage(event)">
+        <button class="b button" onclick="removeBackground()">Remove Background</button>
+        <a id="downloadLink" style="display: none;">
+          <button>Download Image</button>
+        </a>
+      </div>
+    </div>
+  
+    <div id="aboutContent" style="display: none;">
+      <h1>About This Project</h1>
+      <p>เว็บไซต์ลบพื้นหลัง  (Remove Background) ได้รับการออกแบบและพัฒนาด้วยโปรแกรมภาษา <strong>HTML, CSS </strong>และ <strong>JavaScript</strong> โดยใช้โปรแกรม <strong>" Visual Studio Code "</strong></p>
+      <p>ขั้นตอนการใช้งานเว็ปไซต์มีดังนี้ : <br>
+        1. กดปุ่ม "Choose image" เพื่อเลือกภาพที่ต้องการลบพื้นหลัง หรือวางลิงก์ URL ของภาพในช่อง "Enter image URL"<br>
+        2. หลังจากนำเข้าภาพจากคอมพิวเตอร์หรือวาง URL ของภาพแล้ว ให้กดปุ่ม "Remove Background"<br>
+        3. เว็บไซต์จะทำการลบพื้นหลังของภาพและแสดงผลภาพที่ลบพื้นหลังแล้ว ขึ้นบนหน้าจอ<br>
+        4. หลังจากแสดงภาพแล้ว จะมีปุ่ม "Download" แสดงขึ้นมา เพื่อให้ผู้ใช้ดาวน์โหลดภาพไปยังคอมพิวเตอร์และนำภาพไปใช้งานต่อได้ทันที
+      </p>
+    </div>
+    
+    <div id="contactContent" style="display: none;">
+      <h1>Contact Us</h1>
+      <p>สอบถามหรือติดต่อ สามารถติดต่อได้ที่ <strong>ratchanonpaenchan@gmail.com</strong></p>
+      <p>รายชื่อผู้จัดทำ ช่องทางติดต่อ :</p>
+      <ul>
+        <li>
+          <h2 class="name"> <pre><strong>นาย ณัฐรวี เกษตรบริบูรณ์ (Natrawee Kasetboriboon)   [design]</strong></pre></h2>
+          <img class="ig" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1000px-Instagram_logo_2022.svg.png" alt="Instagram">
+          <p class="ling"><a href="https://www.instagram.com/natrawee_win/" target="_blank">natrawee_win</a></p>
+          <img class="facebook" src="https://static.vecteezy.com/system/resources/previews/018/930/698/non_2x/facebook-logo-facebook-icon-transparent-free-png.png" alt="Facebook">
+          <p class="fbook"><a href="https://www.facebook.com/natrawee.kasetboriboon.9?locale=th_TH" target="_blank">Natrawee Kasetboriboon </a></p>
+        </li>
+        <li>
+          <h2 class="name"> <pre><strong>นาย ธนโชติ สุขลิตร (Thanachot Sukalit)        [Documenter]</strong></pre></h2>
+          <img class="ig" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1000px-Instagram_logo_2022.svg.png" alt="Instagram">
+          <p class="ling"><a href="https://www.instagram.com/big_thana_06" target="_blank">big_thana_06</a></p>
+          <img class="facebookbig" src="https://static.vecteezy.com/system/resources/previews/018/930/698/non_2x/facebook-logo-facebook-icon-transparent-free-png.png" alt="Facebook">
+          <p class="fbook"><a href="https://www.facebook.com/tanachot.sukalit?mibextid=ZbWKwL" target="_blank">Thanachot Sukalit</a></p>
+        </li>
+        <li></li>
+          <h2 class="name"> <pre><strong>    นาย รัชชานนท์ แป้นจันทร์ (Ratchanon Paenchan)  [Editor]</strong></pre></h2>
+          <img class="igb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1000px-Instagram_logo_2022.svg.png" alt="Instagram">
+          <p class="ling"><a href="https://www.instagram.com/ban_k_ratchanon" target="_blank">ban_k_ratchanon</a></p>
+          <img class="facebookb" src="https://static.vecteezy.com/system/resources/previews/018/930/698/non_2x/facebook-logo-facebook-icon-transparent-free-png.png" alt="Facebook">
+          <p class="fbook"><a href="https://www.facebook.com/profile.php?id=100011726871503" target="_blank">Ratchanon Paenchan</a></p>
+        </li>
+      </ul>
+    </div>
+
+  <div class="notification" style="display: none;"></div>
+  <script src="script.js"></script>
+</body>
+</html>
