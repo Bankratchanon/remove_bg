@@ -1,5 +1,0 @@
-# ปกปิดไฟล์ที่มี API key
-api_key.js
-config/
-node_modules/
-.env
