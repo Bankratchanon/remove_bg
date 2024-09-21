@@ -1,8 +1,0 @@
-API_KEY=7SnEVFZKAJwe89uKN2RMqJWx
-require('dotenv').config();
-const apiKey = process.env.API_KEY;
-
-api_key.js
-config/
-node_modules/
-.env
