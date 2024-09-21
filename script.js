@@ -20,7 +20,6 @@ function showContact() {
   document.getElementById('contactContent').style.display = 'block';
 }
 
-
 function showNotification(message) {
   const notification = document.querySelector('.notification');
   if (notification) {
@@ -51,7 +50,7 @@ function previewImage(event) {
     img.src = reader.result;
     img.alt = 'Uploaded Image';
     originalImage = img.src;
-    originalFileName = file.name.replace(/\.[^/.]+$/, "");  // เอาชื่อไฟล์ที่อัปโหลดมาใช้
+    originalFileName = file.name.replace(/\.[^/.]+$/, ""); // เอาชื่อไฟล์ที่อัปโหลดมาใช้
     originalImageContainer.innerHTML = '';
     originalImageContainer.appendChild(img);
   };
@@ -81,8 +80,7 @@ async function removeBackground() {
     return;
   }
 
-  const apiKey = ' FV5GXHtmXFPnBKLesJW1VHR7 ';
-  formData.append('size', 'auto');
+  const apiKey = 'FV5GXHtmXFPnBKLesJW1VHR7';
 
   try {
     const response = await fetch('https://api.remove.bg/v1.0/removebg', {
@@ -112,9 +110,12 @@ async function removeBackground() {
 
     const downloadLink = document.getElementById('downloadLink');
     downloadLink.href = modifiedImage;
-    downloadLink.download = originalFileName + ' .png';
+    downloadLink.download = originalFileName.replace(/\s+/g, '_') + '.png';
     downloadLink.style.display = 'inline-block';
   } catch (error) {
     showNotification('An error occurred: ' + error.message);
   }
 }
+
+// เชื่อมต่อปุ่ม
+document.getElementById('submitBtn').addEventListener('click', removeBackground);
