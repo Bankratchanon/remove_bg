@@ -81,7 +81,7 @@ async function removeBackground() {
     return;
   }
 
-  const apiKey = '7SnEVFZKAJwe89uKN2RMqJWx';
+  const apiKey = 'FV5GXHtmXFPnBKLesJW1VHR7';
   formData.append('size', 'auto');
 
   try {
