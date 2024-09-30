@@ -79,9 +79,8 @@ async function removeBackground() {
     showNotification('Please upload an image or enter a URL first.');
     return;
   }
-  require('dotenv').config();
-  const apiKey = process.env.API_KEY;
-  
+  const apiKey = 'f2qqJb1csMkYJDroPzvwKNjK';
+
   try {
     const response = await fetch('https://api.remove.bg/v1.0/removebg', {
       method: 'POST',
