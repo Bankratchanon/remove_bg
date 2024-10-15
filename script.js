@@ -79,7 +79,7 @@ async function removeBackground() {
     showNotification('Please upload an image or enter a URL first.');
     return;
   }
-  const apiKey = 'f2qqJb1csMkYJDroPzvwKNjK';
+  const apiKey = 'wanbTnv1ehn5zMTSUqpdbm3q';
 
   try {
     const response = await fetch('https://api.remove.bg/v1.0/removebg', {
