@@ -62,7 +62,7 @@ body {
   padding-top: 70px;
   height: 100vh;
   margin: 0;
-  color: #ecf0f1;
+  color: #b01ac4;
 }
 pre {
   font-family: "Itim", cursive;
@@ -301,7 +301,7 @@ a button:hover {
   display: inline-block;
   vertical-align: middle;
   margin-top: 10px;
-  margin-left: 43px;
+  margin-left: 42px;
 }
 
 .facebookbig{
@@ -310,7 +310,7 @@ a button:hover {
   display: inline-block;
   vertical-align: middle;
   margin-top: 10px;
-  margin-left: 75px;
+  margin-left: 52px;
 }
 
 .fbook{
