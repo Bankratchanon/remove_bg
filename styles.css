@@ -284,6 +284,14 @@ a button:hover {
   display: inline-block;
   vertical-align: middle;
   margin-top: 20px;
+  margin-right: 10px;
+}
+
+.bbbig{
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 20px;
+  margin-right: 70px;
 }
 
 .facebook{
